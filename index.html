@@ -1,12 +1,12 @@
 <!DOCTYPE HTML>
 <!--
-	Stellar by HTML5 UP
+	Modified from Stellar by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
 <html>
 	<head>
-		<title>Stellar by HTML5 UP</title>
+		<title>Cloud Optimized GeoTIFF</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
@@ -22,9 +22,8 @@
 				<!-- Header -->
 					<header id="header" class="alt">
 						<span class="logo"><img src="images/logo.svg" alt="" /></span>
-						<h1>Stellar</h1>
-						<p>Just another free, fully responsive site template<br />
-						built by <a href="https://twitter.com/ajlkn">@ajlkn</a> for <a href="https://html5up.net">HTML5 UP</a>.</p>
+						<h1>Cloud Optimized GeoTIFF</h1>
+						<p>An imagery format for cloud-native geospatial processing</p>
 					</header>
 
 				<!-- Nav -->
@@ -45,11 +44,11 @@
 								<div class="spotlight">
 									<div class="content">
 										<header class="major">
-											<h2>Ipsum sed adipiscing</h2>
+											<h2>About</h2>
 										</header>
-										<p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna
-										adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus.
-										Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+										<p>A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a HTTP file server, whose internal organization 
+											enables more efficient workflows on the cloud. It does this by leveraging the ability of clients issuing ​HTTP GET range 
+											request ("bytes: start_offset-end_offset" HTTP header) to ask for just the parts of a file they need.</p>
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>
@@ -58,6 +57,33 @@
 								</div>
 							</section>
 
+<!-- Second Section -->
+							<section id="second" class="main special">
+								<header class="major">
+									<h2>Why Cloud Optimized</h2>
+									<p>More and more geospatial data is migrating to the cloud, and it most often is stored on cloud-based object storage like S3 or Google Cloud Storage. 
+										Traditional GIS file formats can easily sit on the cloud, but serving up web map tiles or doing on the fly processing of the data are difficult to do 
+										efficiently with those formats. They often have to be fully downloaded to another location and then translated to an optimized format or stored in memory.</p>
+									<p>Cloud Optimized GeoTIFF’s arose as AWS started to host large imagery public datasets like Landsat. GeoTIFF’s can be read by every geospatial software, and 
+										tweaking the formatting of the files enabled third-party services to read directly from the Landsat public dataset bucket instead of having to copy data. 
+										This enables a single copy of the data on the cloud to be used by many different consumers, contrasting to the traditional GIS paradigm of constantly copying 
+										data to different computers.</p> 
+									<p>The other major benefit of the COG format is that consumers of the data who are only looking to process a small part of a huge file can efficiently request just 
+										the area they care about. Often a user will only want to process a 20 sq km field of 200kb from a file that is hundreds of megabytes or even gigabytes in size. 
+										COG’s that are accessed with proper software on S3, GCS or others that support HTTP GET range requests will be able to return just the needed 200kb instead of the full file.</p> 
+									<p>The format is attractive to data providers like Planet and DigitalGlobe, because they can produce data in a single format that can be downloaded by desktop users and also 
+										streamed directly to cloud applications. All users of the data can just reference the cloud-hosted files instead of downloading them. Newer geospatial parallel processing 
+										systems like Google Earth Engine, GeoTrellis and IDAHO are also potentially able to take advantage of COG’s directly, instead of having to copy data into internal file formats. </p>
+								</header>
+								
+								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="generic.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>						
+						
 						<!-- First Section -->
 							<section id="first" class="main special">
 								<header class="major">
@@ -90,7 +116,7 @@
 						<!-- Second Section -->
 							<section id="second" class="main special">
 								<header class="major">
-									<h2>Ipsum consequat</h2>
+									<h2>Why Cloud Optimized</h2>
 									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
 									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
 								</header>
