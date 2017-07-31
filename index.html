@@ -46,9 +46,9 @@
 										<header class="major">
 											<h2>About</h2>
 										</header>
-										<p>A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a HTTP file server, whose internal organization 
-											enables more efficient workflows on the cloud. It does this by leveraging the ability of clients issuing ​HTTP GET range 
-											request ("bytes: start_offset-end_offset" HTTP header) to ask for just the parts of a file they need.</p>
+										<p>A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a HTTP file server, with an internal organization 
+											enables more efficient workflows on the cloud. It does this by leveraging the ability of clients issuing ​<a href="https://tools.ietf.org/html/rfc7233"HTTP GET range 
+											request</a> ("bytes: start_offset-end_offset" HTTP header) to ask for just the parts of a file they need.</p>
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>
@@ -56,15 +56,18 @@
 									<span class="image"><img src="images/pic01.jpg" alt="" /></span>
 								</div>
 							</section>
+						
 
 <!-- Second Section -->
-							<section id="second" class="main special">
+							<section id="why" class="main special">
 								<header class="major">
-									<h2>Why Cloud Optimized</h2>
+									<h2>Why Cloud Optimized GeoTIFF?</h2>
 									<p>More and more geospatial data is migrating to the cloud, and it most often is stored on cloud-based object storage like S3 or Google Cloud Storage. 
 										Traditional GIS file formats can easily sit on the cloud, but serving up web map tiles or doing on the fly processing of the data are difficult to do 
 										efficiently with those formats. They often have to be fully downloaded to another location and then translated to an optimized format or stored in memory.</p>
-									<p>Cloud Optimized GeoTIFF’s arose as AWS started to host large imagery public datasets like Landsat. GeoTIFF’s can be read by every geospatial software, and 
+										</header>
+								
+								<p class="content">Cloud Optimized GeoTIFF’s arose as AWS started to host large imagery public datasets like Landsat. GeoTIFF’s can be read by every geospatial software, and 
 										tweaking the formatting of the files enabled third-party services to read directly from the Landsat public dataset bucket instead of having to copy data. 
 										This enables a single copy of the data on the cloud to be used by many different consumers, contrasting to the traditional GIS paradigm of constantly copying 
 										data to different computers.</p> 
@@ -74,15 +77,30 @@
 									<p>The format is attractive to data providers like Planet and DigitalGlobe, because they can produce data in a single format that can be downloaded by desktop users and also 
 										streamed directly to cloud applications. All users of the data can just reference the cloud-hosted files instead of downloading them. Newer geospatial parallel processing 
 										systems like Google Earth Engine, GeoTrellis and IDAHO are also potentially able to take advantage of COG’s directly, instead of having to copy data into internal file formats. </p>
-								</header>
-								
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
 								<footer class="major">
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn More</a></li>
 									</ul>
 								</footer>
-							</section>						
+							</section>	
+
+												<!-- Get Started -->
+							<section id="in-detail" class="main special">
+								<header class="major">
+									<h2>How does it work?</h2>
+									<p>Cloud Optimized GeoTIFF rely on two complementary pieces of technology.</p>
+									<p>The first is the ability of GeoTIFF’s to store not just the raw pixels of the image, but to organize those pixels in particular ways. The second is HTTP GET range requests, that let clients 
+										ask for just the portions of a file that they need. Together these enable fully online processing of data by COG-aware clients, as they can stream the right parts of the GeoTIFF as they need it, instead of having to download the whole file. </p>
+								</header>
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="https://trac.osgeo.org/gdal/wiki/CloudOptimizedGeoTIFF" class="button special">Read the Spec</a></li>
+										<li><a href="in-depth.html" class="button">Learn More</a></li>
+									</ul>
+								</footer>
+							</section>
+						
+							
 						
 						<!-- First Section -->
 							<section id="first" class="main special">
