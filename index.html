@@ -48,7 +48,7 @@
 										</header>
 										<p>A Cloud Optimized GeoTIFF (COG) is a regular GeoTIFF file, aimed at being hosted on a HTTP file server, with an internal organization 
 											enables more efficient workflows on the cloud. It does this by leveraging the ability of clients issuing ​<a href="https://tools.ietf.org/html/rfc7233">HTTP GET range 
-											request</a> ("bytes: start_offset-end_offset" HTTP header) to ask for just the parts of a file they need.</p>
+											requests</a> to ask for just the parts of a file they need.</p>
 										<ul class="actions">
 											<li><a href="generic.html" class="button">Learn More</a></li>
 										</ul>
@@ -81,7 +81,7 @@
 								</ul>
 								<footer class="major">
 									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn More</a></li>
+										<li><a href="why-cog.html" class="button">Learn More</a></li>
 									</ul>
 								</footer>
 							</section>
@@ -103,31 +103,7 @@
 								</footer>
 							</section>
 						
-<!-- Second Section -->
-							<section id="why" class="main special">
-								<header class="major">
-									<h2>Why Cloud Optimized GeoTIFF?</h2>
-									<p>More and more geospatial data is migrating to the cloud, and it most often is stored on cloud-based object storage like S3 or Google Cloud Storage. 
-										Traditional GIS file formats can easily sit on the cloud, but serving up web map tiles or doing on the fly processing of the data are difficult to do 
-										efficiently with those formats. They often have to be fully downloaded to another location and then translated to an optimized format or stored in memory.</p>
-										</header>
-								
-								<p class="content">Cloud Optimized GeoTIFF’s arose as AWS started to host large imagery public datasets like Landsat. GeoTIFF’s can be read by every geospatial software, and 
-										tweaking the formatting of the files enabled third-party services to read directly from the Landsat public dataset bucket instead of having to copy data. 
-										This enables a single copy of the data on the cloud to be used by many different consumers, contrasting to the traditional GIS paradigm of constantly copying 
-										data to different computers.
-											<br><br>The other major benefit of the COG format is that consumers of the data who are only looking to process a small part of a huge file can efficiently request just 
-										the area they care about. Often a user will only want to process a 20 sq km field of 200kb from a file that is hundreds of megabytes or even gigabytes in size. 
-										COG’s that are accessed with proper software on S3, GCS or others that support HTTP GET range requests will be able to return just the needed 200kb instead of the full file.</br> 
-									<br>The format is attractive to data providers like Planet and DigitalGlobe, because they can produce data in a single format that can be downloaded by desktop users and also 
-										streamed directly to cloud applications. All users of the data can just reference the cloud-hosted files instead of downloading them. Newer geospatial parallel processing 
-										systems like Google Earth Engine, GeoTrellis and IDAHO are also potentially able to take advantage of COG’s directly, instead of having to copy data into internal file formats.</br> </p>
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+
 						
 						
 						
