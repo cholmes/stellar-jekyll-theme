@@ -76,7 +76,7 @@
 									<li>
 										<span class="icon major style5 fa-diamond"></span>
 										<h3>Legacy Compatibility</h3>
-										<p>Traditional GIS software is able to treat Cloud-Optimized GeoTIFF’s just like normal GeoTIFF’s, so data providers need only produce one format for newer and older workflows.</p>
+										<p>Traditional GIS software is able to treat Cloud-Optimized GeoTIFF’s just like normal GeoTIFF’s, so data providers need only produce one format.</p>
 									</li>
 								</ul>
 								<footer class="major">
@@ -116,7 +116,7 @@
 										tweaking the formatting of the files enabled third-party services to read directly from the Landsat public dataset bucket instead of having to copy data. 
 										This enables a single copy of the data on the cloud to be used by many different consumers, contrasting to the traditional GIS paradigm of constantly copying 
 										data to different computers.
-											<br>The other major benefit of the COG format is that consumers of the data who are only looking to process a small part of a huge file can efficiently request just 
+											<br><br>The other major benefit of the COG format is that consumers of the data who are only looking to process a small part of a huge file can efficiently request just 
 										the area they care about. Often a user will only want to process a 20 sq km field of 200kb from a file that is hundreds of megabytes or even gigabytes in size. 
 										COG’s that are accessed with proper software on S3, GCS or others that support HTTP GET range requests will be able to return just the needed 200kb instead of the full file.</br> 
 									<br>The format is attractive to data providers like Planet and DigitalGlobe, because they can produce data in a single format that can be downloaded by desktop users and also 
