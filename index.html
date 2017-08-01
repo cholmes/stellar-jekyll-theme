@@ -33,6 +33,7 @@
 							<li><a href="#why">Why COG?</a></li>
 							<li><a href="#in-detail">How it works</a></li>
 							<li><a href="#cta">Get Started</a></li>
+							<li><a href="#implementations">Implementations</a></li>
 						</ul>
 					</nav>
 
@@ -104,17 +105,29 @@
 							</section>
 						
 
-						
+							<!-- Get Started -->
+							<section id="cta" class="main special">
+								<header class="major">
+									<h2>Get Started</h2>
+									<p>There are a variety of ways to get started. Data Providers can start to make imagery available as Cloud Optimized GeoTiffs. Developers can leverage <a href="https://trac.osgeo.org/gdal/wiki/CloudOptimizedGeoTIFF#HowtoreaditwithGDAL">GDAL's VSICurl</a> with COG Data. And Users can find software and data providers who use COG today. </p>
+								</header>
+								<footer class="major">
+									<ul class="actions">
+										<li><a href="providers-guide.html" class="button special">Data Providers</a></li>
+										<li><a href="developer-guide.html" class="button special">Developers</a></li>
+										<li><a href="#implementations" class="button special">Users</a></li>
+									</ul>
+								</footer>
+							</section>			
 						
 						
 					
 
-						<!-- Second Section -->
-							<section id="second" class="main special">
+						<!-- implementation Section -->
+							<section id="implementations" class="main special">
 								<header class="major">
-									<h2>Why Cloud Optimized</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
+									<h2>Software and Data Providers</h2>
+									<p>COG is just getting started, so many software and data providers still do not fully support it, and indeed many have likely never heard of it. You can help this change quickly, by sharing this website with those who should implement it. As the list of providers grows this page will evolve to more details on how to use it.</p>
 								</header>
 								<ul class="statistics">
 									<li class="style1">
@@ -138,7 +151,22 @@
 										<strong>1,024</strong> Nullam
 									</li>
 								</ul>
-								<p class="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+								<h2>Software</h2>
+								<p>Cloud Optimized GeoTIFFs started as a GDAL project, leveraging the <a href=”http://gdal.org/cpl__vsi_8h.html#a4f791960f2d86713d16e99e9c0c36258”>vsicurl driver</a>, so they are well supported. See the <a href=”https://trac.osgeo.org/gdal/wiki/CloudOptimizedGeoTIFF#HowtoreaditwithGDAL”>GDAL Wiki</a> for how to read COG files with GDAL.</p>
+								<p>Other software providers are less clear, but we have heard prototypes and first implementations from a number of them. If you are a software provider feel free to update this section.</p>
+								<ul>
+									<li><a href=”http://farmshots.com/”>Farmshots</a> builds agriculture analytics on top of Planet’s Cloud Optimized GeoTIFF’s, pulling in just the needed field data and serving it up live to their customers.</li>
+									<li><a href=”http://digitalglobe.com”>DigitalGlobe</a> has built a project called <a href=”https://gbdxdocs.digitalglobe.com/docs/idaho-course”>IDAHO</a> that can read COG files and perform on the fly band math analysis. </li>
+									<li><a href=”https://eosda.com/”>Earth Observing System</a>’s Engine and Land Viewer are both able to leverage Cloud Optimized GeoTIFFs for live web tile serving and on the fly band math.</li>
+									<li><a href=”http://geotrellis.io”>GeoTrellis</a> has not yet implemented, but has <a href=”https://github.com/locationtech/geotrellis/issues/2284”>detailed their plans</a> to do so.</li>
+								</ul>
+							
+								<h2>Data Providers</h2>
+								<ul>
+									<li><a href=”http://planet.com”>Planet</a> provides all its data (from RapidEye, PlanetScope and soon SkySat satellites) as Cloud Optimized GeoTIFFs.</li>
+									<li><a href=”http://digitalglobe.com”>DigitalGlobe</a>’s <a href=”gbdx.geobigdata.io”>GBDX</a> data is available as Cloud Optimized GeoTIFF, for all processing done on the platform.</li>
+									</ul>	
+								
 								<footer class="major">
 									<ul class="actions">
 										<li><a href="generic.html" class="button">Learn More</a></li>
@@ -146,20 +174,7 @@
 								</footer>
 							</section>
 
-						<!-- Get Started -->
-							<section id="cta" class="main special">
-								<header class="major">
-									<h2>Congue imperdiet</h2>
-									<p>Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-									posuere. Nulla massa urna, fermentum eget quam aliquet.</p>
-								</header>
-								<footer class="major">
-									<ul class="actions">
-										<li><a href="generic.html" class="button special">Get Started</a></li>
-										<li><a href="generic.html" class="button">Learn More</a></li>
-									</ul>
-								</footer>
-							</section>
+
 
 					</div>
 
